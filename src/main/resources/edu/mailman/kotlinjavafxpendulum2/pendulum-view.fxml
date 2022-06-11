@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="edu.mailman.kotlinjavafxpendulum2.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<Pane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.mailman.kotlinjavafxpendulum2.PendulumController">
+   <children>
+      <Polyline fx:id="polyLineArc" fill="WHITE" stroke="BLUE" strokeType="INSIDE">
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+      </Polyline>
+      <Circle fx:id="cirPendulumBall" fill="DODGERBLUE" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</Pane>
