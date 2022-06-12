@@ -6,6 +6,7 @@ import javafx.animation.Timeline
 import javafx.collections.ObservableList
 import javafx.geometry.Point2D
 import javafx.scene.shape.Circle
+import javafx.scene.shape.Line
 import javafx.scene.shape.Polyline
 import javafx.util.Duration
 import kotlin.math.cos
@@ -26,6 +27,8 @@ val angleIncrements = arrayOf(0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0,
 class PendulumController {
     lateinit var polyLineArc: Polyline
     lateinit var cirPendulumBall: Circle
+    lateinit var linPendulumString: Line
+
     private var points: MutableList<Point2D> = ArrayList()
     private var pointIndex = -1
     private var pointDirection = forward
@@ -84,5 +87,9 @@ class PendulumController {
         // Move the ball along the arc
         cirPendulumBall.centerX = points[pointIndex].x
         cirPendulumBall.centerY = points[pointIndex].y
+
+        // Move the end of the pendulum's string along the arc
+        linPendulumString.endX = points[pointIndex].x
+        linPendulumString.endY = points[pointIndex].y
     }
 }

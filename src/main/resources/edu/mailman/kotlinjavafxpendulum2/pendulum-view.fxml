@@ -8,6 +8,7 @@
       <Polyline fx:id="polyLineArc" fill="WHITE" stroke="BLUE" strokeType="INSIDE">
 
       </Polyline>
-      <Circle fx:id="cirPendulumBall" fill="DODGERBLUE" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="cirPendulumBall" fill="BLACK" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line fx:id="linPendulumString" endX="250.0" endY="400.0" startX="250.0" startY="50.0" strokeWidth="2.0" />
    </children>
 </Pane>
